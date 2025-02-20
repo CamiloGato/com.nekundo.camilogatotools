@@ -1,0 +1,24 @@
+﻿{
+  "name": "com.nekundo.camilogatotools",
+  "version": "0.1.0",
+  "displayName": "Camilo Gato's Tools",
+  "description": "Set of tools designed and developed by Camilo Gato",
+  "unity": "2019.1",
+  "documentationUrl": "https://camilogato.dev/",
+  "changelogUrl": "https://camilogato.dev/",
+  "licensesUrl": "https://camilogato.dev/",
+  "dependencies": {
+    
+  },
+  "keywords": [
+    "Tools",
+    "Reactive Programming",
+    "State Machine"
+  ],
+  "author": {
+    "name": "CamiloGato",
+    "email": "cm.andres022@hotmail.com",
+    "url": "https://camilogato.dev/"
+  }
+}
+
