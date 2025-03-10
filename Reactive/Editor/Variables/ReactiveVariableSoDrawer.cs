@@ -71,17 +71,17 @@ namespace Reactive.Editor.Variables
                 textField.SetEnabled(false);
                 _valueContainer.Add(textField);
             }
-            // else if (typeof(UnityEngine.Object).IsAssignableFrom(variableType))
-            // {
-            //     ObjectField objectRefField = new ObjectField("Value")
-            //     {
-            //         allowSceneObjects = false,
-            //         value = (UnityEngine.Object) currentValue,
-            //         objectType = variableType
-            //     };
-            //     objectRefField.SetEnabled(false);
-            //     _valueContainer.Add(objectRefField);
-            // }
+            else if (typeof(UnityEngine.Object).IsAssignableFrom(variableType))
+            {
+                ObjectField objectRefField = new ObjectField("Value")
+                {
+                    allowSceneObjects = false,
+                    value = (UnityEngine.Object) currentValue,
+                    objectType = variableType
+                };
+                objectRefField.SetEnabled(false);
+                _valueContainer.Add(objectRefField);
+            }
             else
             {
                 _valueContainer.Add(new Label($"Value: Not Supported ({variableType.Name})"));

@@ -54,15 +54,15 @@ namespace Reactive.Editor.Variables
                     _initialValue.stringValue
                 );
             }
-            // else if (typeof(UnityEngine.Object).IsAssignableFrom(fieldType))
-            // {
-            //     _initialValue.objectReferenceValue = EditorGUILayout.ObjectField(
-            //         "Initial Value",
-            //         _initialValue.objectReferenceValue,
-            //         fieldType,
-            //         true
-            //     );
-            // }
+            else if (typeof(UnityEngine.Object).IsAssignableFrom(fieldType))
+            {
+                _initialValue.objectReferenceValue = EditorGUILayout.ObjectField(
+                    "Initial Value",
+                    _initialValue.objectReferenceValue,
+                    fieldType,
+                    true
+                );
+            }
             else
             {
                 EditorGUILayout.HelpBox("Unsupported type for Initial Value", MessageType.Warning);

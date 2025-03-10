@@ -53,5 +53,12 @@ namespace Reactive.Runtime.Variables
         {
             return Value;
         }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            Value = initialValue;
+        }
+#endif
     }
 }
